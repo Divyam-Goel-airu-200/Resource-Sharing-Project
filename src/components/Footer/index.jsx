@@ -46,6 +46,16 @@ const Footer = () => {
         
             AbesMitr is a college resource sharing website designed to serve as a dynamic platform for students to collaborate and share resources. AbesMitr aims to foster an environment where students can easily access and exchange a wide range of educational materials, such as lecture notes, study guides, previous question papers, and more.
           </p>
+          <p className="comfort text-center text-gray-800 font-bold mobile:text-sm dark:bg-[#44403C] dark:text-white">
+
+        
+            Contact Us:-011-2255-8899                                   
+          </p>
+          <p className="comfort text-center text-gray-800 font-bold mobile:text-sm dark:bg-[#44403C] dark:text-white">
+
+        
+          Address:- 24H, Building no- 54, Floor 5, New Industrial Area, New Delhi-110085 
+          </p>
 
           <div className="mt-6 pl-5 w-full flex items-center justify-center gap-4 scale-[0.75]">
             {socials.map((social, index) => {
