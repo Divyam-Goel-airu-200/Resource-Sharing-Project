@@ -30,7 +30,7 @@ const Sidepanel = ({open, setOpen}) => {
                         </div>
                         <div className="flex-1 h-72">
                         <div className={` ${open ? "w-0" : "w-full"} logo`}>
-                            <img className="" src="/fileSharing3.webp">
+                            <img className="" src="/mainpic.webp">
                             </img>
                         </div>
 

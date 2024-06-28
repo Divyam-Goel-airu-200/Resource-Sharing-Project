@@ -26,8 +26,8 @@ function ResetPassword() {
           <h1 className="text-2xl font-bold dark:text-[#1A1A1C]" style={{ fontFamily: 'monospace' }}>Reset Password</h1>
 
           <h2 className="flex items-center justify-end dark:text-[#1A1A1C]">
-            <img src="/iiitdmj-logo.webp" alt="pr-0 w-6 h-6" className="pr-0 w-8 h-8 iiitdmj-logo mx-1" />
-            IIITDMJ
+            <img src="/logo.webp" alt="pr-0 w-6 h-6" className="pr-0 w-8 h-8 iiitdmj-logo mx-1" />
+            ABESEC
           </h2>
         </div>
         <hr className=' ' />
