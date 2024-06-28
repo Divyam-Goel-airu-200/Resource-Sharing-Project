@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-// import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-// import { auth } from '../../../Firebase/ClientApp.mjs';
+import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from '../../../Firebase/ClientApp.mjs';
 import { Navigate } from 'react-router-dom';
 
 const PasswordValidationModal = () => {
@@ -37,8 +37,8 @@ const PasswordValidationModal = () => {
 }
 
 function SignForm() {
-  // const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
-  // const [userr, loadingg, errorrr] = useAuthState(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+  const [userr, loadingg, errorrr] = useAuthState(auth);
   const [emailid, setEmailid] = useState('');
   const [password, setPassword] = useState('');
   const [confirmpassword, setConfirmPassword] = useState('');
@@ -61,22 +61,22 @@ function SignForm() {
       setErrorcause('password');
     }
     else {
-      // createUserWithEmailAndPassword(emailid, password);
+      createUserWithEmailAndPassword(emailid, password);
     }
   }
-  // useEffect(() => {
-  //   if (error) {
-  //     if (error.message.toLowerCase().includes('password')) {
-  //       setErrorcause('password');
-  //     }
-  //     else if (error.message.toLowerCase().includes('email')) {
-  //       setErrorcause('email');
-  //     }
-  //   }
-  // }, [error])
-  // if (user || userr) {
-  //   return <Navigate replace to="/" />;
-  // }
+  useEffect(() => {
+    if (error) {
+      if (error.message.toLowerCase().includes('password')) {
+        setErrorcause('password');
+      }
+      else if (error.message.toLowerCase().includes('email')) {
+        setErrorcause('email');
+      }
+    }
+  }, [error])
+  if (user || userr) {
+    return <Navigate replace to="/" />;
+  }
   return (
     <div className=" h-screen flex items-center justify-center border-black pt-[11vh]" style={{
       backgroundImage: 'url("/loginpage-background-image.webp")',
@@ -90,19 +90,19 @@ function SignForm() {
           <h1 className="text-2xl font-bold -m-4 dark:text-[#1A1A1C]" style={{ fontFamily: 'monospace' }}>SignUp</h1>
 
           <h2 className="flex items-center justify-end dark:text-[#1A1A1C]">
-            <img src="/iiitdmj-logo.webp" alt="pr-0 w-6 h-6" className="pr-0 w-8 h-8 iiitdmj-logo mx-1" />
-            IIITDMJ
+            <img src="/logo.webp" alt="pr-0 w-6 h-6" className="pr-0 w-8 h-8 iiitdmj-logo mx-1" />
+            ABESEC
           </h2>
 
         </div>
         <hr className=' ' />
         <form className="px-6 py-4">
-          {/* <div className={`my-3 text-center text-base bg-red-500 text-white rounded-lg p-1 ${(errorr) ? 'visible' : 'hidden'}`}>
+          <div className={`my-3 text-center text-base bg-red-500 text-white rounded-lg p-1 ${(errorr) ? 'visible' : 'hidden'}`}>
             {(errorr) ? errorr : null}
           </div>
           <div className={`my-3 text-center text-base bg-red-500 text-white rounded-lg p-1 capitalize ${(error) ? 'visible' : 'hidden'}`}>
             {(error) ? error.message.replaceAll('Firebase: Error (auth/', '').replaceAll(').', '').replaceAll('-', ' ') : null}
-          </div> */}
+          </div>
           <div className="mb-6">
             <label className="text-gray-500">Name</label>
             <input type="text" className="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none dark:text-[#1A1A1C]" required />
@@ -118,12 +118,12 @@ function SignForm() {
             </div>
             <input type="password" className={`w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none dark:text-[#1A1A1C] ${(errorcause == 'password') ? 'border-red-500' : null}`} required onChange={(e) => setPassword(e.target.value)} />
           </div>
-          {/* <div className="mb-6">
+          <div className="mb-6">
             <label className="text-gray-500">Confirm Password</label>
             <input type="password" className={`w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none dark:text-[#1A1A1C] ${(errorcause == 'password') ? 'border-red-500' : null}`} required onChange={(e) => setConfirmPassword(e.target.value)} />
-          </div> */}
+          </div>
 
-          {/* {loading ?
+          {loading ?
             <div className={`flex items-center justify-center h-10`}>
               <img src="/loader.gif" alt="" className='bg-white h-full' />
             </div> :
@@ -137,7 +137,7 @@ function SignForm() {
                 setErrorcause('');
                 signupuser(emailid, password, confirmpassword)
               }}
-            />} */}
+            />}
           <div className="mt-6 text-center text-base text-gray-600">
             Already a member? <a href="#" className="text-blue-500 hover:underline"><Link to="/login">Login</Link></a>
           </div>

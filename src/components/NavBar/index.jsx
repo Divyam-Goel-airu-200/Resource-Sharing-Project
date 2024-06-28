@@ -2,12 +2,12 @@ import React from 'react'
 import classNames from 'classnames';
 import { Link } from "react-router-dom";
 import DarkMode from '../DarkMode';
-// import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
-// import { auth } from '../../../Firebase/ClientApp.mjs';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import { auth } from '../../../Firebase/ClientApp.mjs';
 
 const NavBar = () => {
-  // const [user, loading, error] = useAuthState(auth);
-  // const [signout, loadingg, erorr] = useSignOut(auth);
+  const [user, loading, error] = useAuthState(auth);
+  const [signout, loadingg, erorr] = useSignOut(auth);
   return (
     <div className={classNames({
       'w-screen h-fit': true,
@@ -30,7 +30,7 @@ const NavBar = () => {
           'dark:text-white': true,
           'mobile:text-lg': true,
         })}>
-          <Link to='/'>UniShare</Link>
+          <Link to='/'>AbesMitr</Link>
         </div>
 
         {/* NavItems... */}
@@ -39,7 +39,7 @@ const NavBar = () => {
           'flex items-center justify-end gap-4': true,
           'mobile:gap-2': true,
         })}>
-          {/* <button
+          <button
             className={classNames({
               'theme-btn-shadow rounded-xl bg-[#3B82F6]': true,
               'px-4 py-2': true,
@@ -49,8 +49,8 @@ const NavBar = () => {
             })}
           >
             <Link to='/login'>Login</Link>
-          </button> */}
-          {/* <button 
+          </button>
+          <button 
             className={classNames({
               'theme-btn-shadow rounded-xl bg-[#3B82F6]': true,
               'px-4 py-2': true,
@@ -60,8 +60,8 @@ const NavBar = () => {
             })}
           >
             <Link to='/Dashboard'>UserName</Link>
-          </button> */}
-          {/* <button
+          </button>
+          <button
             className={classNames({
               'theme-btn-shadow rounded-xl bg-[#3B82F6]': true,
               'px-4 py-2': true,
@@ -72,7 +72,7 @@ const NavBar = () => {
             onClick={() => signout()}
           >
             Logout
-          </button> */}
+          </button>
           <DarkMode />
         </div>
       </div>
