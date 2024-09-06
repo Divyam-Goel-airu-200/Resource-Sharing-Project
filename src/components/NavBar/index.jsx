@@ -30,7 +30,7 @@ const NavBar = () => {
           'dark:text-white': true,
           'mobile:text-lg': true,
         })}>
-          <Link to='/'>AbesMitr</Link>
+          <Link to='/'>CollegeMitr</Link>
         </div>
 
         {/* NavItems... */}
