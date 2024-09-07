@@ -39,13 +39,13 @@ const Dashboard = () => {
           </div>
           <div className={`Userdata grid col-1 bg-gray-100 h-96 ${open? "w-full ml-4":"w-full ml-12"} p-8 shadow-sm rounded-lg`}>
             <p className={`username text-3xl font-semibold text-gray-900`}>
-              Name : Ashish K Kundu
+              Name : Divyam Goel
             </p>
             <p className={`username text-3xl font-semibold text-gray-900`}>
-              Roll No : 201269
+              Roll No : 58963
             </p>
             <p className={`username text-3xl font-semibold text-gray-900`}>
-              Batch : 2012
+              Batch : 2024
             </p>
           </div>
         </div>
