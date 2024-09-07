@@ -1,7 +1,7 @@
 const cardData = [
   {
     id: 1,
-    image: 'academics.webp',
+    image: 'academics1.jpg',
     domain: 'Academics',
     link: '/materials/academics',
     urlparams: 'academics',

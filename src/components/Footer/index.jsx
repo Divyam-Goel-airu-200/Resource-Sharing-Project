@@ -35,7 +35,7 @@ const Footer = () => {
           'dark:text-white': true,
           'mobile:text-lg': true,
         })}>
-          <Link to='/'>AbesMitr</Link>
+          <Link to='/'>CollegeMitr</Link>
         </div>
 
 
@@ -44,7 +44,7 @@ const Footer = () => {
           <p className="comfort text-center text-gray-800 font-bold mobile:text-sm dark:bg-[#44403C] dark:text-white">
 
         
-            AbesMitr is a college resource sharing website designed to serve as a dynamic platform for students to collaborate and share resources. AbesMitr aims to foster an environment where students can easily access and exchange a wide range of educational materials, such as lecture notes, study guides, previous question papers, and more.
+            CollegeMitr is a college resource sharing website designed to serve as a dynamic platform for students to collaborate and share resources. CollegeMitr aims to foster an environment where students can easily access and exchange a wide range of educational materials, such as lecture notes, study guides, previous question papers, and more.
           </p>
           <p className="comfort text-center text-gray-800 font-bold mobile:text-sm dark:bg-[#44403C] dark:text-white">
 
